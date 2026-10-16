@@ -1,0 +1,282 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - XI TKJ 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- PILIHAN HALAMAN -->
+    <input type="radio" name="halaman" id="tab-about" checked>
+    <input type="radio" name="halaman" id="tab-skill">
+    <input type="radio" name="halaman" id="tab-experience">
+    <input type="radio" name="halaman" id="tab-galery">
+
+    <!-- HEADER -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand">
+                <h1>XI TKJ 2</h1>
+            </div>
+
+            <nav class="main-nav">
+                <label for="tab-about">About Me</label>
+                <label for="tab-skill">Skill</label>
+                <label for="tab-experience">Experience</label>
+                <label for="tab-galery">Galery</label>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HALAMAN ABOUT ME -->
+        <section class="page about-page">
+            <div class="welcome">
+                <h2>Selamat Datang di My Portfolio</h2>
+                <p>
+                    Hallo, ini halaman portofolio saya.
+                    Ada beberapa hal yang ingin saya sampaikan
+                    kepada Anda semuanya.
+                </p>
+            </div>
+
+            <div class="card-box">
+                <h3>A. Identitas</h3>
+
+                <table class="identity-table">
+                    <tr>
+                        <th>Foto</th>
+                        <td>
+                            <img src="syifajpg.png"
+                                 alt="Foto Syifa'u Rahma Wati"
+                                 class="profile-photo">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Nama</th>
+                        <td>Yulfiana Wahyu</td>
+                    </tr>
+                    <tr>
+                        <th>Alamat</th>
+                        <td>Bence,Garum, Blitar</td>
+                    </tr>
+                    <tr>
+                        <th>No. HP</th>
+                        <td>
+                            <a href="https://wa.me/6285876091036"
+                               target="_blank"
+                               rel="noopener noreferrer">
+                                Chat Me
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Pelajar</th>
+                        <td>Teknik Komputer dan Jaringan</td>
+                    </tr>
+                    <tr>
+                        <th>Pengalaman</th>
+                        <td>
+                            <ol>
+                                <li>Belajar jaringan komputer</li>
+                                <li>Belajar membuat halaman web</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Trainer</th>
+                        <td>
+                            <ul>
+                                <li>Google Master Trainer</li>
+                                <li>Trainer MikroTik</li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="form-section">
+                <h3>B. Saling Berkenalan</h3>
+
+                <form action="#"
+                      onsubmit="return false;">
+                    <table class="form-table">
+                        <tr>
+                            <td><label for="nama">Nama</label></td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" id="nama"
+                                       name="nama"
+                                       placeholder="Masukkan nama">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email</label></td>
+                            <td>:</td>
+                            <td>
+                                <input type="email" id="email"
+                                       name="email"
+                                       placeholder="Masukkan email">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Jenis Kelamin</td>
+                            <td>:</td>
+                            <td>
+                                <input type="radio" id="laki"
+                                       name="gender" value="Laki-laki">
+                                <label for="laki">Laki-laki</label>
+
+                                <input type="radio" id="perempuan"
+                                       name="gender" value="Perempuan">
+                                <label for="perempuan">Perempuan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="tempat">Tempat Lahir</label></td>
+                            <td>:</td>
+                            <td>
+                                <select id="tempat" name="tempat">
+                                    <option value="">Pilih</option>
+                                    <option value="Blitar">Blitar</option>
+                                    <option value="Malang">Malang</option>
+                                    <option value="Surabaya">Surabaya</option>
+                                    <option value="Jakarta">Jakarta</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Ciri Khas</td>
+                            <td>:</td>
+                            <td>
+                                <input type="checkbox" id="ramah"
+                                       name="ciri" value="Ramah">
+                                <label for="ramah">Ramah</label>
+
+                                <input type="checkbox" id="cakep"
+                                       name="ciri" value="Cakep">
+                                <label for="cakep">Cakep</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="pesan">Pesan</label></td>
+                            <td>:</td>
+                            <td>
+                                <textarea id="pesan" name="pesan"
+                                          rows="4"
+                                          placeholder="Tulis pesan kamu"></textarea>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+
+                <div class="continue-area">
+                    <label for="tab-skill" class="btn-submit">
+                        Continue &rarr;
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- HALAMAN SKILL -->
+        <section class="page skill-page">
+            <div class="content-section">
+                <h2>My Skill</h2>
+                <p>Berikut beberapa kemampuan yang sedang saya pelajari.</p>
+
+                <div class="skill-item">
+                    <h3>HTML</h3>
+                    <p>Mempelajari struktur dasar halaman website.</p>
+                </div>
+
+                <div class="skill-item">
+                    <h3>CSS</h3>
+                    <p>Mengatur warna, ukuran, dan tampilan website.</p>
+                </div>
+
+                <div class="skill-item">
+                    <h3>Jaringan Komputer</h3>
+                    <p>Mempelajari dasar jaringan komputer dan perangkat jaringan.</p>
+                </div>
+
+                <div class="page-buttons">
+                    <label for="tab-about" class="btn-secondary">
+                        &larr; Kembali
+                    </label>
+                    <label for="tab-experience" class="btn-submit">
+                        Continue &rarr;
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- HALAMAN EXPERIENCE -->
+        <section class="page experience-page">
+            <div class="content-section">
+                <h2>My Experience</h2>
+                <p>
+                    Berikut pengalaman belajar saya di bidang
+                    Teknik Komputer dan Jaringan.
+                </p>
+
+                <div class="experience-item">
+                    <h3>Belajar Jaringan Komputer</h3>
+                    <p>Mengenal perangkat jaringan dan konfigurasi dasar.</p>
+                </div>
+
+                <div class="experience-item">
+                    <h3>Membuat Website</h3>
+                    <p>Belajar membuat halaman web menggunakan HTML dan CSS.</p>
+                </div>
+
+                <div class="page-buttons">
+                    <label for="tab-skill" class="btn-secondary">
+                        &larr; Kembali
+                    </label>
+                    <label for="tab-galery" class="btn-submit">
+                        Lihat Galery &rarr;
+                    </label>
+                </div>
+            </div>
+        </section>
+
+        <!-- HALAMAN GALERY -->
+        <section class="page galery-page">
+            <div class="content-section">
+                <h2>My Galery</h2>
+                <p>
+                    Dokumentasi kegiatan dan hasil belajar saya.
+                </p>
+
+                <div class="gallery-container">
+                    <img src="syifajpg.png"
+                         alt="Foto profil portofolio"
+                         class="gallery-photo">
+                </div>
+
+                <div class="page-buttons">
+                    <label for="tab-experience" class="btn-secondary">
+                        &larr; Kembali
+                    </label>
+                    <label for="tab-about" class="btn-submit">
+                        Kembali ke About Me
+                    </label>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <hr>
+        <p>&copy; 2026 D.llufy All rights reserved.</p>
+        <p>My Portfolio | XI TKJ 2</p>
+    </footer>
+
+</body>
+  </html>
