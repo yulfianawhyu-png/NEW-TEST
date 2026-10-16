@@ -1,0 +1,334 @@
+
+/* PENGATURAN DASAR */
+body {
+    background-color: rgb(222, 225, 226);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* MENYEMBUNYIKAN RADIO BUTTON */
+input[name="halaman"] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* HEADER */
+.main-header {
+    width: 100%;
+    background-color: rgb(126, 28, 61);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 0;
+}
+
+.brand h1 {
+    color: white;
+    margin: 0;
+    font-size: 28px;
+}
+
+/* MENU NAVIGASI */
+.main-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.main-nav label {
+    display: block;
+    padding: 8px 12px;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.main-nav label:hover {
+    background-color: lightslategray;
+}
+
+/* WARNA MENU AKTIF */
+#tab-about:checked ~ .main-header label[for="tab-about"],
+#tab-skill:checked ~ .main-header label[for="tab-skill"],
+#tab-experience:checked ~ .main-header label[for="tab-experience"],
+#tab-galery:checked ~ .main-header label[for="tab-galery"] {
+    background-color: rgb(34, 37, 34);
+}
+
+/* MENGATUR TAMPILAN HALAMAN */
+.page {
+    display: none;
+}
+
+/* HALAMAN YANG DIPILIH AKAN MUNCUL */
+#tab-about:checked ~ main .about-page,
+#tab-skill:checked ~ main .skill-page,
+#tab-experience:checked ~ main .experience-page,
+#tab-galery:checked ~ main .galery-page {
+    display: block;
+}
+
+/* JUDUL PEMBUKA */
+.welcome {
+    text-align: center;
+    padding: 30px 20px 15px;
+}
+
+.welcome h2 {
+    color: rgb(126, 28, 61);
+    margin-bottom: 10px;
+}
+
+/* KARTU IDENTITAS DAN FORM */
+.card-box,
+.form-section,
+.content-section {
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-box h3,
+.form-section h3,
+.content-section h2 {
+    color: rgb(126, 28, 61);
+    margin-top: 0;
+}
+
+/* TABEL IDENTITAS */
+.identity-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.identity-table th,
+.identity-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+
+.identity-table th {
+    width: 30%;
+    background-color: #f5e8ed;
+}
+
+.identity-table ol,
+.identity-table ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* FOTO PROFIL */
+.profile-photo {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* TABEL FORM */
+.form-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.form-table td {
+    padding: 8px 5px;
+    vertical-align: middle;
+}
+
+.form-table td:first-child {
+    width: 120px;
+    font-weight: bold;
+}
+
+.form-table td:nth-child(2) {
+    width: 15px;
+    text-align: center;
+}
+
+/* INPUT FORM */
+.form-table input[type="text"],
+.form-table input[type="email"],
+.form-table select,
+.form-table textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.form-table textarea {
+    resize: vertical;
+}
+
+/* TOMBOL */
+.continue-area {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.btn-submit,
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 18px;
+    background-color: rgb(126, 28, 61);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-submit:hover {
+    background-color: rgb(90, 20, 44);
+}
+
+.btn-secondary {
+    background-color: #666;
+}
+
+.btn-secondary:hover {
+    background-color: #444;
+}
+
+/* TOMBOL ANTARHALAMAN */
+.page-buttons {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 25px;
+}
+
+/* SKILL DAN EXPERIENCE */
+.skill-item,
+.experience-item {
+    margin: 15px 0;
+    padding: 15px;
+    background-color: #f5e8ed;
+    border-left: 4px solid rgb(126, 28, 61);
+    border-radius: 5px;
+}
+
+.skill-item h3,
+.experience-item h3 {
+    margin-top: 0;
+    color: rgb(126, 28, 61);
+}
+
+/* GALERI */
+.gallery-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.gallery-photo {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* FOOTER */
+.main-footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgb(126, 28, 61);
+    color: white;
+}
+
+.main-footer hr {
+    border: none;
+    border-top: 2px solid rgb(235, 235, 239);
+    margin-bottom: 15px;
+}
+
+.main-footer p {
+    margin: 5px 0;
+}
+
+/* TAMPILAN HP */
+@media screen and (max-width: 600px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .brand h1 {
+        font-size: 24px;
+    }
+
+    .main-nav {
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .main-nav label {
+        padding: 7px 8px;
+        font-size: 12px;
+    }
+
+    .welcome {
+        padding: 25px 15px 10px;
+    }
+
+    .welcome h2 {
+        font-size: 23px;
+    }
+
+    .card-box,
+    .form-section,
+    .content-section {
+        width: auto;
+        margin: 20px 12px;
+        padding: 15px;
+    }
+
+    .form-table td {
+        padding: 7px 3px;
+    }
+
+    .form-table td:first-child {
+        width: 95px;
+    }
+
+    .identity-table th,
+    .identity-table td {
+        padding: 7px;
+    }
+
+    .page-buttons {
+        justify-content: center;
+    }
+  }
